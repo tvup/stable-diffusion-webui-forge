@@ -56,7 +56,10 @@ canvas_head += web_js('canvas.min.js')
 
 
 def image_to_base64(image_array, numpy=True):
-    image = Image.fromarray(image_array) if numpy else image_array
+    if isinstance(image_array, np.ndarray):
+        image = Image.fromarray(image_array)
+    else:
+        image = image_array
     image = image.convert("RGBA")
     buffered = BytesIO()
     image.save(buffered, format="PNG")
