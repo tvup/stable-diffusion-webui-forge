@@ -11,6 +11,16 @@
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
 #export COMMANDLINE_ARGS=""
+export COMMANDLINE_ARGS="--cuda-malloc --cuda-stream --pin-shared-memory --disable-nan-check \
+  --listen --api --enable-insecure-extension-access \
+  --ckpt-dir /srv/models/store/checkpoints \
+  --vae-dir /srv/models/store/vae \
+  --lora-dir /srv/models/store/lora \
+  --embeddings-dir /srv/models/store/embeddings \
+  --hypernetwork-dir /srv/models/store/hypernetworks \
+  --controlnet-dir /srv/models/store/controlnet \
+  --text-encoder-dir /srv/models/store/text_encoders \
+  --esrgan-models-path /srv/models/store/upscale_models"
 
 # python3 executable
 #python_cmd="python3"
