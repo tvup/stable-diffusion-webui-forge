@@ -1,0 +1,3 @@
+[submodule "extensions/sd-forge-flux-inpaint"]
+	path = extensions/sd-forge-flux-inpaint
+	url = git@github.com:tvup/sd-forge-flux-inpaint.git
